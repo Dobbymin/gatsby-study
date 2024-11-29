@@ -1,20 +1,18 @@
 // If you don't want to use TypeScript you can delete this file!
-import * as React from "react"
-import { PageProps, Link, graphql, HeadFC } from "gatsby"
+import React from 'react';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { PageProps, Link, graphql, HeadFC } from 'gatsby';
+
+import { Seo } from '../components';
+import { Layout } from '../widgets';
 
 type DataProps = {
   site: {
-    buildTime: string
-  }
-}
+    buildTime: string;
+  };
+};
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({
-  data,
-  location,
-}) => (
+const UsingTypescript = ({ data, location }: PageProps<DataProps>) => (
   <Layout>
     <h1>
       Gatsby supports <b>TypeScript by default</b>
@@ -33,19 +31,19 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
       built on {data.site.buildTime}.
     </p>
     <p>
-      To learn more, head over to our{" "}
-      <a href="https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/">
+      To learn more, head over to our{' '}
+      <a href='https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/'>
         documentation about TypeScript
       </a>
       .
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to='/'>Go back to the homepage</Link>
   </Layout>
-)
+);
 
-export const Head: HeadFC<DataProps> = () => <Seo title="Using TypeScript" />
+export const Head: HeadFC<DataProps> = () => <Seo title='Using TypeScript' />;
 
-export default UsingTypescript
+export default UsingTypescript;
 
 export const query = graphql`
   {
@@ -53,4 +51,4 @@ export const query = graphql`
       buildTime(formatString: "YYYY-MM-DD hh:mm a z")
     }
   }
-`
+`;

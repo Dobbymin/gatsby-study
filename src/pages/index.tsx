@@ -1,8 +1,14 @@
 import React, { FunctionComponent } from 'react';
-import Text from '../components/Test';
 
-const IndexPage: FunctionComponent = function () {
-  return <Text text='Home' />;
+import Text from '../components/Test';
+import { Layout } from '../widgets';
+
+const Home: FunctionComponent = function () {
+  return (
+    <Layout>
+      <Text text='Contents' />
+    </Layout>
+  );
 };
 
-export default IndexPage;
+export default Home;
