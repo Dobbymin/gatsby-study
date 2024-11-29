@@ -3,10 +3,6 @@
     "target": "ES6",
     "lib": ["dom", "dom.iterable"],
     "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,6 +19,6 @@
   "rules": {
     "no-unused-variable": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
