@@ -7,8 +7,15 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "@typescript-eslint", "simple-import-sort"],
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "react", "import", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
   "rules": {
     "@typescript-eslint/no-explicit-any": 1,
     "simple-import-sort/imports": 1,
