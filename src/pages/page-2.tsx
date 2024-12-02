@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'gatsby';
 
-import { Seo } from '../components/seo/seo';
+import { Seo } from '../shared';
 import { Layout } from '../widgets';
 
 const SecondPage = () => (

@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react';
 
-import Text from '../components/Test';
+import { Contents } from '../shared';
 import { Layout } from '../widgets';
 
 const Home: FunctionComponent = function () {
   return (
     <Layout>
-      <Text text='Contents' />
+      <Contents contents='Contents' />
     </Layout>
   );
 };

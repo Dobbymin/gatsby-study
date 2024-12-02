@@ -3,7 +3,7 @@ import React from 'react';
 
 import { PageProps, Link, graphql, HeadFC } from 'gatsby';
 
-import { Seo } from '../components';
+import { Seo } from '../shared';
 import { Layout } from '../widgets';
 
 type DataProps = {
