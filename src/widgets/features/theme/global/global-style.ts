@@ -1,9 +1,9 @@
-import { extendTheme, space } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
-export const GlobalTheme = extendTheme({
-  // Font Family 선언
+// Global 테마 정의
+const GlobalStyle = extendTheme({
   fonts: {
-    body: `'Pretendard-Regular', sans-serif`,
+    body: `"Noto Sans KR", serif, Nanum Gothic, Malgun Gothic, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue`,
   },
   colors: {
     /**
@@ -19,12 +19,6 @@ export const GlobalTheme = extendTheme({
       whiteGray: '#F2F2F2',
     },
   },
-  black: {
-    100: '#2e2e2e',
-    200: '#333',
-    300: '#666',
-    400: '#909090',
-  },
   lineHeights: {
     loose: 1.75,
     normal: 1.5,
@@ -38,34 +32,31 @@ export const GlobalTheme = extendTheme({
     5: '32px',
     6: '64px',
   },
-  size: {
+  sizes: {
     content: '54rem',
-    gutter: space[5],
-    gap: space[6],
+    gutter: '32px',
+    gap: '64px',
   },
   styles: {
-    // Global Font Face 선언
     global: {
       '@font-face': {
-        fontFamily: 'Pretendard-Regular',
-        src: `url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff')`,
-        fontWeight: '400, 700, 900',
+        fontFamily: 'Noto Sans KR',
+        src: `url(''https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'') format('woff')`,
+        fontWeight: '500, 700, 900',
         fontStyle: 'normal',
+        fontOpticalSizing: 'auto',
       },
       body: {
         margin: 0,
         padding: 0,
         boxSizing: 'border-box',
-        overflowY: 'auto',
-        width: '100%',
-        height: '100%',
-        position: 'relative',
+        fontFamily: `'Noto Sans KR', sans-serif`,
       },
       '*': {
-        boxSizing: 'border-box', // 모든 요소에 box-sizing 적용
+        boxSizing: 'border-box',
       },
     },
   },
 });
 
-export default extendTheme(GlobalTheme);
+export default extendTheme(GlobalStyle);
