@@ -1,15 +1,10 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
+import { GatsbyConfig } from 'gatsby';
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
+import { GlobalStyle } from './src/widgets';
+
+const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Dobby Blog`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -22,16 +17,16 @@ module.exports = {
         allExtensions: true,
       },
     },
-    `gatsby-plugin-image`,
+    'gatsby-plugin-image',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/assets`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
@@ -46,7 +41,13 @@ module.exports = {
          * if your app uses a lot z-index to position elements.
          */
         portalZIndex: 40,
+        /**
+         * Import the custom theme here
+         */
+        chakraTheme: GlobalStyle,
       },
     },
   ],
 };
+
+export default config;
